@@ -54,23 +54,21 @@ z-index: 0;
     -moz-transition: width 1s, height 1s, margin 1s;
     -ms-transition: width 1s, height 1s, margin 1s;
     transition: width 1s, height 1s, margin 1s;
-}
-
-#content.move{
     -webkit-animation: myanim 5s;
     animation: myanim 5s;
 }
+
 @-webkit-keyframes myanim
 {
-0%   {top:0;left:0; width: 100px; height: 100px;}
-66%  {top:0;left:800px; width:100px;height:100px;}
-67%  {top:0;left:800px; width:200px; height: 200px;}
-100% {top:0; left:0; width: 200px; height:200px;}
+0%   {top:0;left:0; width: 0px; height: 0px;}
+66%  {top:0;left:800px; width:25vw;height:25vh;}
+67%  {top:0;left:800px; width:75vw; height: 75vh;}
+100% {top:0; left:0; width: 100vw; height:100vh;}
 }
 @keyframes myanim
 {
-0%   {top:0;left:0; width: 100px; height: 100px;}
-66%  {top:0;left:800px; width:100px;height:100px;}
-67%  {top:0;left:800px; width:200px; height: 200px;}
-100% {top:0; left:0; width: 200px; height:200px;}
+0%   {top:0;left:0; width: 0px; height: 0px;}
+66%  {top:0;left:800px; width:25vw;height:25vh;}
+67%  {top:0;left:800px; width:75vw; height: 75vh;}
+100% {top:0; left:0; width: 100vw; height:100vh;}
 }
