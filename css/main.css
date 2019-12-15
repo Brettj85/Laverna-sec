@@ -1,0 +1,37 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+
+.operate-menu{    
+    position: sticky;
+    top: 0px;
+    height:50px;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-end;    
+}
+
+.hamburger-container{
+    position: sticky;
+    background-color:black;
+    height:50px;
+    width:50px;
+    z-index: 100;
+}
+
+.menu-container{
+    height:100vh;
+    width:100vw;
+    background-color:blue;
+    position:absolute;
+    top: 0px;
+    z-index: 0;
+}
+
+.main-content{
+    position:absolute;
+    top: 0px;
+    z-index: 10;
+}
