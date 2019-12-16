@@ -1,21 +1,12 @@
-// document.getElementById('hamburger')
-//         .addEventListener('click', function (event) {
-//             alert("clicked hamburger");
-//         });
+document.getElementById("hamburg").addEventListener("click", function(){
+    var hamburger = document.getElementById("hamburg");
+    hamburger.classList.toggle("is-active");
+});
 
-function collapseDiv(){
-    var content = document.getElementById("content");
-    var direction = document.getElementById("indexer");
-    if (direction.innerText == "0") {
-        direction.innerText = "1";
-        content.classList.remove("main-content-big");
-        content.classList.add("main-content-small");
-        content.classList.toggle("move");
-        
-    }else{
-        direction.innerText = "0";
-        content.classList.remove("main-content-small");
-        content.classList.add("main-content-big");        
-        content.classList.toggle("move");
-    }
-}
+document.getElementById("up").addEventListener("click", function(){
+    var hamburger = document.getElementById("up");
+});
+
+document.getElementById("down").addEventListener("click", function(){
+    var hamburger = document.getElementById("down");
+});

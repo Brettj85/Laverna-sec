@@ -101,9 +101,7 @@
             height:40px;
             width:40px;
             z-index: 10;
-        }
-
-        
+        }       
 
         .visible{
             z-index:5;
@@ -211,7 +209,6 @@
             width: 50px;
             height:50px;
             color: white;
-            z-index: 10;
             transform: rotate(-180deg);
             -webkit-transform: rotate(-180deg);
         }
@@ -222,19 +219,19 @@
             left:90vw;
             width: 50px;
             height:50px;
-            color: white;
-            z-index: 10;
+            color: white;            
+            overflow:hidden;
         }
     </style>
 </head>
 
 <body>
-        <div id="up" class="scroll-up visible" onclick="scrollUp()">V</div>
-        <div id="down" class="scroll-down visible" onclick="scrollDown()">V</div>
+    <div id="up" class="scroll-up visible" onclick="scrollUp()">V</div>
+    <div id="down" class="scroll-down visible" onclick="scrollDown()">V</div>
     <div class="hamburgerM12 hamburger hamburger--elastic" id="menuToggle" onclick="changeDiv()">
-            <div class="hamburger-box">
-            <div class="hamburger-inner"></div>
-          </div>
+        <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+        </div>
     </div>
     <div class="menu">
         <div class="menu-item-container">
@@ -291,18 +288,12 @@
     var content = document.getElementById("content");    
     var direction = document.getElementById("indexer");
     var hamburger = document.getElementById("menuToggle");
-    var up = document.getElementById("up");
-    var down = document.getElementById("down");
-    up.classList.toggle('visible');
-    up.classList.toggle('invisible');
-    down.classList.toggle('visible');
-    down.classList.toggle('invisible');
     hamburger.classList.toggle("is-active");
     if (direction.innerHTML == "0") {
         direction.innerHTML = "1";
         content.classList.toggle("content-closed");
         content.classList.toggle("content-open");
-        zIndex();
+        zIndex(true, 500);
     }
     else{
         direction.innerHTML = "0";        
@@ -311,19 +302,29 @@
         content.classList.toggle("content-closed");
         content.classList.toggle("content-open");
     }
-        
+    zIndex(false, 600);
 }
 
-async function zIndex(){
-    var result = await sleep();
+async function zIndex(choose){    
+    var result = await sleep(choose);
 }
 
-function sleep() {
+function sleep(choose, time) {
   return new Promise(resolve => {
     setTimeout(() => {
+        if (choose) {
+            var up = document.getElementById("up");
+            var down = document.getElementById("down");
+            up.classList.toggle('visible');
+            up.classList.toggle('invisible');
+            down.classList.toggle('visible');
+            down.classList.toggle('invisible');
+        }
+        else{
         var contentContainer = document.getElementById("contentContainer");
         contentContainer.classList.toggle("invisible");
-    }, 500);
+        }
+    }, time);
   });
 }
 
