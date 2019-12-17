@@ -208,8 +208,8 @@ body{
 .main-content{
     position: absolute;
     top:0px;
-    width:calc(100vw-2px);
-    height:calc(100vh-2px);
+    width:100vw;
+    height:100vh;
     background-color:red;
     overflow: scroll;
     scrollbar-width: none;
@@ -223,8 +223,9 @@ body{
 .main-content::-webkit-scrollbar { 
     width: 0 !important;
 }
+
 .inner-content{
-    width:calc(100vw - 2px);
+    width: 100vw;
     height:100vh;
 }
 
