@@ -210,7 +210,7 @@ body{
     top:0px;
     width:100vw;
     height:100vh;
-    background-color:red;
+    background-color:lightgray;
     overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -263,11 +263,13 @@ body{
     margin-bottom: 50px;
     padding:0px;
     border:0px solid white;
+    font-family: 'Maven Pro', sans-serif;
 }
 
     .menu-item:hover{
-        border-bottom:6px solid white;
-        border-radius: 5px;
+        /* border-bottom:6px solid white;
+        border-radius: 5px; */
+        color: darkred;
         font-size:90px;
     } 
 
