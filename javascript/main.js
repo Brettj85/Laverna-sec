@@ -18,15 +18,15 @@ document.getElementById("hamburg").addEventListener("click", function(){
 });
 
 document.getElementById("up").addEventListener("click", function(){
-    // var h = document.documentElement.clientHeight;
-    // var container = document.getElementById('mainContent');
-    // container.scrollBy(0, -h);
+    var h = document.documentElement.clientHeight;
+    var container = document.getElementById('mainContent');
+    container.scrollBy(0, -h);
 });
 
 document.getElementById("down").addEventListener("click", function(){
-    // var h = document.documentElement.clientHeight;
-    // var container = document.getElementById('mainContent');
-    // container.scrollBy(0, h);
+    var h = document.documentElement.clientHeight;
+    var container = document.getElementById('mainContent');
+    container.scrollBy(0, h);
 });
 
 async function zIndex(time){    
