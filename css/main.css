@@ -124,6 +124,7 @@ body{
     top:40px;
     right:5vw;
     z-index:5;
+    outline:none;
 }
 .scroll-button{
     width: 50px;
@@ -136,6 +137,7 @@ body{
     display:flex;
     justify-content: center;
     align-items:center;
+    outline:none;
 }
 
     .scroll-button:hover{
@@ -264,6 +266,7 @@ body{
     padding:0px;
     border:0px solid white;
     font-family: 'Maven Pro', sans-serif;
+    outline: none;
 }
 
     .menu-item:hover{
