@@ -21,13 +21,9 @@ body{
   margin: 0;
   overflow: visible; 
   }
-  .hamburger:hover {
-    background-color: rgba(0,0,0,.7); 
-    }
+  .hamburger:hover {}
 
-  .hamburger.is-active:hover {
-    background-color: rgba(0,0,0,.7);  
-    }
+  .hamburger.is-active:hover {}
 
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
@@ -58,7 +54,7 @@ body{
     transition-duration: 0.15s;
     transition-timing-function: ease; 
     }
-
+  
   .hamburger-inner::before, .hamburger-inner::after {
     content: "";
     display: block; 
@@ -105,10 +101,28 @@ body{
     }    
 /* End Hamburger */
 
-/* Arrows */
-/* End Arrows */
+/* Tests */
+.fill-space-for-testing{
+  height:calc(100vh - 1px);
+  width:100vw;
+}
+/* End Tests */
 
 /* Main Page CSS */
+.check{
+  width:100%;
+  height:1px;
+  background-color:white;
+}
+
+.header{
+  width:100%;
+  height:253px;
+  background-color:white;
+  display:flex;
+  flex-direction:row;
+  
+}
 
 
 .visible{
