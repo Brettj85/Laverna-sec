@@ -128,7 +128,7 @@ body{
   background-image: url(../images/laverna.png);
   background-position: center; 
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 200px 200px;
 }
 
 .logo-slogan-container{
@@ -192,6 +192,57 @@ body{
 
   .header-menu-item:hover{
     border-bottom:3px solid black;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .header-menu-item{
+      font-size:25px;
+      margin-bottom:0;
+    }
+    .logo-slogan-container{
+      flex-direction:column;
+      height: auto;
+    }
+    .business-name{
+      font-size:40px;
+      margin-bottom:0px;
+      margin-top:0px;
+      text-align:center;
+      height:auto;
+    }
+    .header{
+      height:auto;
+      width:100%;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .slogan-container{
+      height:auto;
+      margin:0px;
+    }
+
+    .slogan{
+      font-size:20px;
+      height:auto;      
+      color:white;
+      background-color:rgba(0,0,0,.7);
+      padding: 20px;
+      border-radius: 30px;
+    }
+    .header-nav{
+      height:auto;
+    }
+
+    .header-menu-item{
+      COLOR:WHITE;
+      background-color:black;
+    }
+    .header-menu-item:hover{
+      COLOR:black;
+      background-color:white;
+    }
+
   }
 
 .home{
