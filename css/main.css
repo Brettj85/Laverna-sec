@@ -309,6 +309,14 @@ body{
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
 }
+
+.content-background{
+  background-image: url(../images/content.png);
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+
 .open{
     width:100vw;
     height:100vh;

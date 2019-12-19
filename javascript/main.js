@@ -1,6 +1,6 @@
 document.getElementById("hamburg").addEventListener("click", hamburgerAction);
 
-function hamburgerAction(){
+function hamburgerAction() {
     var hamburger = document.getElementById("hamburg");
     var content = document.getElementById("contentContainer");
     hamburger.classList.toggle("is-active");
@@ -19,13 +19,13 @@ function hamburgerAction(){
     }
 }
 
-document.getElementById("up").addEventListener("click", function(){
+document.getElementById("up").addEventListener("click", function() {
     var h = document.documentElement.clientHeight;
     var container = document.getElementById('mainContent');
     container.scrollBy(0, -h);
 });
 
-document.getElementById("down").addEventListener("click", function(){
+document.getElementById("down").addEventListener("click", function() {
     var h = document.documentElement.clientHeight;
     var container = document.getElementById('mainContent');
     container.scrollBy(0, h);
@@ -48,7 +48,7 @@ function sleep(time) {
   });
 }
 
-var visibleY = function(el){
+var visibleY = function(el) {
   var rect = el.getBoundingClientRect(), top = rect.top, height = rect.height, 
     el = el.parentNode;
   do {
@@ -71,7 +71,7 @@ function attachEvent(element, event, callbackFunction) {
 };
 
 var update = function(){
-    if(visibleY(document.getElementById('header'))){
+    if(visibleY(document.getElementById('header'))) {
         up.classList.remove("visible");
         up.classList.add("invisible");
         hamburg.classList.remove("hamburger-position");
@@ -84,7 +84,7 @@ var update = function(){
         hamburg.classList.add("hamburger-position");
         hamburg.classList.remove("invisible");
     }
-    if(visibleY(document.getElementById('checkBottom'))){
+    if(visibleY(document.getElementById('checkBottom'))) {
         down.classList.remove("visible");
         down.classList.add("invisible");
     }
@@ -92,6 +92,15 @@ var update = function(){
     {
         down.classList.add("visible");
         down.classList.remove("invisible");
+    }
+
+    if(visibleY(document.getElementById('checkContent'))) {
+        contentContainer.classList.remove("home-background");
+        contentContainer.classList.add("content-background");
+    }
+    if(visibleY(document.getElementById('checkContentTop'))) {
+        contentContainer.classList.add("home-background");
+        contentContainer.classList.remove("content-background");
     }
 };
 
