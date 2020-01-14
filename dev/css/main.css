@@ -101,3 +101,61 @@ body{
     }    
 /* End Hamburger */
 
+.outer-hamburger{
+  width:20px;
+  height:20px;
+  position: absolute;
+  top: 100px;
+  right:100px;
+  z-index: 10;
+}
+
+.menu{
+  width:100vw;
+  height:100vh;
+  background-color: black;
+  position: absolute;
+  top:0px;
+}
+
+.outter-content{
+  z-index: 2;
+  overflow: hidden;    
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;  
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.outter-content::-webkit-scrollbar { 
+  width: 0;
+}
+
+.open{
+  width:100%;
+  height:100%;
+}
+
+.closed{
+  width:0px;
+  height:0px;
+  margin-left:50vw;
+  margin-right:50vw;
+  margin-top:50vh;
+  margin-bottom:50vh;
+}
+
+.inner-content{
+  height:100%;
+  width:100%;
+  background-color:green;
+  overflow:scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.inner-content::-webkit-scrollbar { 
+  width: 0;
+}
